@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css"/>
+  <link rel="stylesheet" href="weathericons/css/weather-icons.css"/>
+  <link rel="stylesheet" href="weathericons/css/weather-icons-wind.css"/>
+  <link rel="stylesheet" href="application.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="jquery/jquery-2.2.1.min.js"></script>
+  <script src="bootstrap/js/bootstrap.js"></script>
+  <script>
+    var color = true;
+
+    $(function()
+    {
+      var date = new Date();
+      if(date.getHours() > 20 || date.getHours() < 7)
+      {
+        toggleColor();
+      }
+      checkTime();
+      setInterval(checkTime, 500);
+      setInterval(getNews, (1000 * 60) * 15);
+      setInterval(getWeather, (1000 * 60) * 15);
+      getWeather();
+      getNews();
+    });
+
+    function checkTime()
+    {
+      var date = new Date();
+      var time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+      $("#time").text(time);
+      if((date.getHours() > 20 || date.getHours() < 7) && color)
+      {
+        toggleColor();
+      }
+      else if((date.getHours() > 7 && date.getHours() < 20) && !color)
+      {
+        toggleColor();
+      }
+    }
+
+    function toggleColor()
+    {
+      if(color)
+      {
+        $("body").css("backgroundColor", "black");
+        $("body").css("color", "white");
+        color = false;
+      }
+      else
+      {
+        $("body").css("backgroundColor", "white");
+        $("body").css("color", "black");
+        color = true;
+      }
+    };
+
+    function getNews()
+    {
+      $.ajax({
+        url: "getNews.php",
+        success: function(data, status, xhr)
+        {
+          $(".newsItem").remove();
+          var list = $("#news");
+          var results = JSON.parse(data);
+          for(var i = 0; i < results.length; i++)
+          {
+            var listItem = "<li class='newsItem'><h1>" + results[i].title + "</h1>";
+            listItem += "<p>" + results[i].description + "</p>";
+            listItem += "<p>" + results[i].source + "</p></li>";
+            list.append($(listItem));
+          }
+        }
+      });
+    };
+
+    function getWeather()
+    {
+      $.ajax({
+        url: "getWeather.php",
+        success: function(data, status, xhr)
+        {
+          var results = JSON.parse(data);
+          var currentWeather = results.currentWeather;
+          $("#currentWeather #forecastIconDiv .forecastIcon").remove();
+          var div = $("#currentWeather #forecastIconDiv");
+          var newIcon = getWeatherIcon(currentWeather.icon);
+          div.append($("<i class='wi " + newIcon + " forecastIcon'></i>"));
+          $("#currentWeather .description").text(currentWeather.description);
+          $("#currentWeather .temperature").text(currentWeather.temperature);
+          $("#currentWeather .wind .wi").remove();
+          $("#currentWeather .wind").prepend($("<i class='wi wi-wind towards-" + currentWeather.windDir + "-deg windDir'></i>"))
+          $("#currentWeather .wind .windSpeed").text(currentWeather.windSpeed);
+          var forecast = results.forecast;
+          for(var i = 0; i < forecast.length; i++)
+          {
+            $("#forecast" + i + " .forecastTime").text(forecast[i].time);
+            $("#forecast" + i + " #forecastIconDiv .forecastIcon").remove();
+            var div = $("#forecast" + i + " #forecastIconDiv");
+            var newIcon = getWeatherIcon(forecast[i].icon);
+            div.append($("<i class='wi " + newIcon + " forecastIcon'></i>"));
+            $("#forecast" + i + " .temperature").text(forecast[i].temperature);
+            $("#forecast" + i + " .wind .wi").remove();
+            $("#forecast" + i + " .wind").prepend($("<i class='wi wi-wind towards-" + forecast[i].windDir + "-deg windDir'></i>"))
+            $("#forecast" + i + " .wind .windSpeed").text(forecast[i].windSpeed);
+          }
+        }
+      })
+    };
+
+    function getWeatherIcon(code)
+    {
+      var newIcon;
+      switch(code)
+      {
+        case "01d":
+          newIcon = "wi-day-sunny";
+          break;
+        case "02d":
+          newIcon = "wi-day-cloudy";
+          break;
+        case "03d":
+          newIcon = "wi-cloud";
+          break;
+        case "04d":
+          newIcon = "wi-cloudy";
+          break;
+        case "09d":
+          newIcon = "wi-day-showers";
+          break;
+        case "10d":
+          newIcon = "wi-day-rain";
+          break;
+        case "11d":
+          newIcon = "wi-day-lightning";
+          break;
+        case "13d":
+          newIcon = "wi-day-snow";
+          break;
+        case "50d":
+          newIcon = "wi-day-fog";
+          break;
+        case "01n":
+          newIcon = "wi-night-sunny";
+          break;
+        case "02n":
+          newIcon = "wi-night-cloudy";
+          break;
+        case "03n":
+          newIcon = "wi-cloud";
+          break;
+        case "04n":
+          newIcon = "wi-cloudy";
+          break;
+        case "09n":
+          newIcon = "wi-night-showers";
+          break;
+        case "10n":
+          newIcon = "wi-night-rain";
+          break;
+        case "11n":
+          newIcon = "wi-night-lightning";
+          break;
+        case "13n":
+          newIcon = "wi-night-snow";
+          break;
+        case "50n":
+          newIcon = "wi-night-fog";
+          break;
+      }
+      return newIcon;
+    }
+  </script>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="row content">
+          <div class="col-sm-3 leftPanel">
+            <div class="row time">
+              <h1 id="time">22:35</h1>
+            </div>
+            <div class="row currentWeather" id="currentWeather">
+              <div id="forecastIconDiv">
+                <i class="wi forecastIcon"></i>
+              </div>
+              <div class="description"></div>
+              <div class="temperature"></div>
+              <div class="wind">
+                <i class="wi "></i>
+                <div class="windSpeed"></div>
+              </div>
+            </div>
+            <div class="row ">
+              <div class="col-sm-4 forecast" id="forecast0">
+                <div class="forecastTime">12:00AM</div>
+                <div id="forecastIconDiv">
+                  <i class="wi forecastIcon"></i>
+                </div>
+                <div class="temperature">7.06</div>
+                <div class="wind">
+                  <i class="wi wi-wind towards-156-deg windDir"></i>
+                  <div class="windSpeed">5.4mph</div>
+                </div>
+              </div>
+              <div class="col-sm-4 forecast" id="forecast1">
+                <div class="forecastTime">15:00AM</div>
+                <div id="forecastIconDiv">
+                  <i class="wi forecastIcon"></i>
+                </div>
+                <div class="temperature">7.06</div>
+                <i class="wi wi-wind towards-156-deg windDir"></i>
+                <div class="windSpeed">5.4mph</div>
+              </div>
+              <div class="col-sm-4 forecast" id="forecast2">
+                <div class="forecastTime">18:00AM</div>
+                <div id="forecastIconDiv">
+                  <i class="wi forecastIcon"></i>
+                </div>
+                <div class="temperature">7.06</div>
+                <i class="wi wi-wind towards-156-deg windDir"></i>
+                <div class="windSpeed">5.4mph</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-9 rightPanel">
+            <ul id="news">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

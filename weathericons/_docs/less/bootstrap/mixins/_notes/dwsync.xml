@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="alerts.less" server="raspberrypi//var/www/html/displayboard/" local="131022078759257006" remote="131022944860000000" Dst="1" />
+<file name="background-variant.less" server="raspberrypi//var/www/html/displayboard/" local="131022078759292031" remote="131022944860000000" Dst="1" />
+<file name="border-radius.less" server="raspberrypi//var/www/html/displayboard/" local="131022078759327151" remote="131022944860000000" Dst="1" />
+<file name="buttons.less" server="raspberrypi//var/www/html/displayboard/" local="131022078759366197" remote="131022944860000000" Dst="1" />
+<file name="center-block.less" server="raspberrypi//var/www/html/displayboard/" local="131022078759401222" remote="131022944860000000" Dst="1" />
+<file name="clearfix.less" server="raspberrypi//var/www/html/displayboard/" local="131022078759441445" remote="131022944860000000" Dst="1" />
+<file name="forms.less" server="raspberrypi//var/www/html/displayboard/" local="131022078759476470" remote="131022944860000000" Dst="1" />
+<file name="gradients.less" server="raspberrypi//var/www/html/displayboard/" local="131022078759516520" remote="131022944860000000" Dst="1" />
+<file name="grid-framework.less" server="raspberrypi//var/www/html/displayboard/" local="131022078759551659" remote="131022944860000000" Dst="1" />
+<file name="grid.less" server="raspberrypi//var/www/html/displayboard/" local="131022078759591684" remote="131022944860000000" Dst="1" />
+<file name="hide-text.less" server="raspberrypi//var/www/html/displayboard/" local="131022078759636144" remote="131022944860000000" Dst="1" />
+<file name="image.less" server="raspberrypi//var/www/html/displayboard/" local="131022078759671169" remote="131022944860000000" Dst="1" />
+<file name="labels.less" server="raspberrypi//var/www/html/displayboard/" local="131022078759706194" remote="131022944860000000" Dst="1" />
+<file name="list-group.less" server="raspberrypi//var/www/html/displayboard/" local="131022078759744041" remote="131022944860000000" Dst="1" />
+<file name="nav-divider.less" server="raspberrypi//var/www/html/displayboard/" local="131022078759779792" remote="131022944860000000" Dst="1" />
+<file name="nav-vertical-align.less" server="raspberrypi//var/www/html/displayboard/" local="131022078759814722" remote="131022944870000000" Dst="1" />
+<file name="opacity.less" server="raspberrypi//var/www/html/displayboard/" local="131022078759853518" remote="131022944870000000" Dst="1" />
+<file name="pagination.less" server="raspberrypi//var/www/html/displayboard/" local="131022078759890739" remote="131022944870000000" Dst="1" />
+<file name="panels.less" server="raspberrypi//var/www/html/displayboard/" local="131022078759929529" remote="131022944870000000" Dst="1" />
+<file name="progress-bar.less" server="raspberrypi//var/www/html/displayboard/" local="131022078759964689" remote="131022944870000000" Dst="1" />
+<file name="reset-filter.less" server="raspberrypi//var/www/html/displayboard/" local="131022078760000634" remote="131022944870000000" Dst="1" />
+<file name="reset-text.less" server="raspberrypi//var/www/html/displayboard/" local="131022078760040659" remote="131022944870000000" Dst="1" />
+<file name="resize.less" server="raspberrypi//var/www/html/displayboard/" local="131022078760075684" remote="131022944870000000" Dst="1" />
+<file name="responsive-visibility.less" server="raspberrypi//var/www/html/displayboard/" local="131022078760110716" remote="131022944870000000" Dst="1" />
+<file name="size.less" server="raspberrypi//var/www/html/displayboard/" local="131022078760151434" remote="131022944870000000" Dst="1" />
+<file name="tab-focus.less" server="raspberrypi//var/www/html/displayboard/" local="131022078760186455" remote="131022944870000000" Dst="1" />
+<file name="table-row.less" server="raspberrypi//var/www/html/displayboard/" local="131022078760226608" remote="131022944870000000" Dst="1" />
+<file name="text-emphasis.less" server="raspberrypi//var/www/html/displayboard/" local="131022078760264118" remote="131022944870000000" Dst="1" />
+<file name="text-overflow.less" server="raspberrypi//var/www/html/displayboard/" local="131022078760299143" remote="131022944870000000" Dst="1" />
+<file name="vendor-prefixes.less" server="raspberrypi//var/www/html/displayboard/" local="131022078760339194" remote="131022944870000000" Dst="1" />
+</dwsync>

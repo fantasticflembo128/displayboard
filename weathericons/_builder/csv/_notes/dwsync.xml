@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="bak.csv" server="raspberrypi//var/www/html/displayboard/" local="131022078753819581" remote="131022944810000000" Dst="1" />
+<file name="beaufort.csv" server="raspberrypi//var/www/html/displayboard/" local="131022078753864628" remote="131022944810000000" Dst="1" />
+<file name="day.csv" server="raspberrypi//var/www/html/displayboard/" local="131022078753904660" remote="131022944810000000" Dst="1" />
+<file name="direction.csv" server="raspberrypi//var/www/html/displayboard/" local="131022078753943816" remote="131022944810000000" Dst="1" />
+<file name="misc.csv" server="raspberrypi//var/www/html/displayboard/" local="131022078753978841" remote="131022944810000000" Dst="1" />
+<file name="moon.csv" server="raspberrypi//var/www/html/displayboard/" local="131022078754023877" remote="131022944810000000" Dst="1" />
+<file name="neutral.csv" server="raspberrypi//var/www/html/displayboard/" local="131022078754063902" remote="131022944810000000" Dst="1" />
+<file name="night.csv" server="raspberrypi//var/www/html/displayboard/" local="131022078754103930" remote="131022944810000000" Dst="1" />
+<file name="temp.csv" server="raspberrypi//var/www/html/displayboard/" local="131022078754138988" remote="131022944810000000" Dst="1" />
+<file name="time.csv" server="raspberrypi//var/www/html/displayboard/" local="131022078754179017" remote="131022944810000000" Dst="1" />
+<file name="wind-degrees.csv" server="raspberrypi//var/www/html/displayboard/" local="131022078754219056" remote="131022944810000000" Dst="1" />
+<file name="wind.csv" server="raspberrypi//var/www/html/displayboard/" local="131022078754259110" remote="131022944810000000" Dst="1" />
+</dwsync>

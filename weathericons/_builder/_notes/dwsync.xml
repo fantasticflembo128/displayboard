@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="beaufort.edn" server="raspberrypi//var/www/html/displayboard/" local="131022078752851768" remote="131022944810000000" Dst="1" />
+<file name="day.edn" server="raspberrypi//var/www/html/displayboard/" local="131022078752896793" remote="131022944820000000" Dst="1" />
+<file name="direction.edn" server="raspberrypi//var/www/html/displayboard/" local="131022078752936822" remote="131022944820000000" Dst="1" />
+<file name="misc.edn" server="raspberrypi//var/www/html/displayboard/" local="131022078752971971" remote="131022944820000000" Dst="1" />
+<file name="moon.edn" server="raspberrypi//var/www/html/displayboard/" local="131022078753011974" remote="131022944820000000" Dst="1" />
+<file name="neutral.edn" server="raspberrypi//var/www/html/displayboard/" local="131022078753057035" remote="131022944820000000" Dst="1" />
+<file name="night.edn" server="raspberrypi//var/www/html/displayboard/" local="131022078753096939" remote="131022944820000000" Dst="1" />
+<file name="templates.edn" server="raspberrypi//var/www/html/displayboard/" local="131022078753133405" remote="131022944820000000" Dst="1" />
+<file name="time.edn" server="raspberrypi//var/www/html/displayboard/" local="131022078753178532" remote="131022944820000000" Dst="1" />
+<file name="wbuilder" server="raspberrypi//var/www/html/displayboard/" local="131022078753649233" remote="131022944830000000" Dst="1" />
+<file name="wind-degrees.edn" server="raspberrypi//var/www/html/displayboard/" local="131022078753693147" remote="131022944830000000" Dst="1" />
+<file name="wind.edn" server="raspberrypi//var/www/html/displayboard/" local="131022078753738014" remote="131022944830000000" Dst="1" />
+</dwsync>

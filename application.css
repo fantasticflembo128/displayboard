@@ -1,0 +1,66 @@
+.content
+{
+  height: 100vh;
+}
+
+.currentWeather
+{
+  text-align: center;
+  font-size: 30px;
+}
+
+.currentWeather .description
+{
+  font-size: 25px;
+}
+
+.currentWeather .forecastIcon
+{
+  font-size: 50px;
+  margin: 5px;
+}
+
+.currentWeather .windDir
+{
+  font-size: 40px;
+  margin: 5px;
+}
+
+.leftPanel
+{
+  padding-left: 30px;
+}
+
+.forecast
+{
+  text-align: center;
+}
+
+.forecast .forecastIcon
+{
+  font-size: 35px;
+  margin: 5px;
+}
+
+.forecast .windDir
+{
+  font-size: 20px;
+  margin: 5px;
+}
+
+.time
+{
+  text-align: center;
+}
+
+.time h1
+{
+  font-size: 50px;
+  margin-top: 5px;
+}
+
+.rightPanel
+{
+  height: 100%;
+  overflow-y: auto;
+}
